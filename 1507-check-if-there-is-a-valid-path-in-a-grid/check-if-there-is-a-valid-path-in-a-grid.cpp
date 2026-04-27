@@ -11,7 +11,7 @@ public:
         DisjointSet() {
             for (int i = 0; i < MAX_N; ++i) f[i] = i;
         }
-
+    //wihtout the bruteforce you can't just visualise so i need to focus on visualising not solving for longer run
         int find(int x) { return x == f[x] ? x : f[x] = find(f[x]); }
 
         void merge(int x, int y) { f[find(x)] = find(y); }
